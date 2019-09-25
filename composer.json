@@ -3,7 +3,7 @@
     "description": "K&H VPOS library",
     "type": "library",
     "require": {
-        "ext-openssl": "^7.2"
+        "ext-openssl": "^7.0"
     },
     "license": "MIT",
     "authors": [
