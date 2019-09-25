@@ -41,7 +41,7 @@ class KHPaymentGateway
 			'mid'    => $this->mid,
 			'txid'   => $txid,
 			'type'   => 'PU',
-			'amount' => $amount * 100,
+			'amount' => $this->ccy == "HUF" ? $amount * 100 : $amount,
 			'ccy'    => $this->ccy
 		];
 		$data['sign'] = $this->sign($data);
@@ -73,7 +73,7 @@ class KHPaymentGateway
 			'mid'    => $this->mid, 
 			'txid'   => $txid, 
 			'type'   => 'RE', 
-			'amount' => $amount * 100,
+			'amount' => $this->ccy == "HUF" ? $amount * 100 : $amount,
 			'ccy'    => $this->ccy
 		];
 		$data['sign'] = $this->sign($data);
