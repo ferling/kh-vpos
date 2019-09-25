@@ -1,0 +1,27 @@
+{
+    "name": "ferling/kh-vpos",
+    "description": "K&H VPOS library",
+    "type": "library",
+    "require": {
+        "ext-openssl": "^7.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tolnai Zoltán",
+            "email": "tolnai.zoltan@ferling.hu"
+        }
+    ],
+    "autoload": {
+        "psr-0" : {
+            "KHPaymentGW" : "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "KHPaymentGW\\KHPaymentGWServiceProvider"
+            ]
+        }
+    },
+}
