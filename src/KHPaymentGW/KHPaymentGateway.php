@@ -13,8 +13,8 @@ class KHPaymentGateway
 	private $privateKey;
 	private $check = false;
 
-	public $liveUrl = 'https://ebank.khb.hu/PaymentGateway';
-	public $testUrl = 'https://ebank.khb.hu/PaymentGatewayTest';
+	public $liveUrl = 'https://pay.khpos.hu/pay/v1';
+	public $testUrl = 'https://pay.sandbox.khpos.hu/pay/v1';
 
 
 	function __construct($mid, $ccy, $lang, $privateKey)
