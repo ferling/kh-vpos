@@ -123,8 +123,10 @@ class KHPaymentGateway
 		// compute signature
 		openssl_sign($data, $signature, $pkeyid);
 
-		// free the key from memory
-		openssl_free_key($pkeyid);
+		// free the key from memory. only necessary before php 8.0
+		if (version_compare(PHP_VERSION, '8.0.0', '<')) {
+			openssl_free_key($pkeyid);
+		}
 
 		return bin2hex($signature);
 	}
